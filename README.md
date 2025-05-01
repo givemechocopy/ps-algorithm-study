@@ -17,21 +17,20 @@
 
 
 
-## 📁 디렉토리 구조 (예시)
+## 📁 디렉토리 구조
 
-📂 `ps-algorithm-study` 
-
-┣ 📂 01_Array 
-
-┃ ┣ 📜 boj_10818_MinMax.py
-
-┃ ┗ 📜 README.md 
-
-┣ 📂 02_StackQueue 
-
-┃ ┗ 📜 ... 
-
-┗ 📜 README.md
+```bash
+📁 ps-algorithm-study
+├── 01_Theory          # 알고리즘 & 자료구조 이론 정리
+├── 02_PS              # 문제 풀이 (백준, 프로그래머스 등)
+│   ├── BOJ/           # 백준
+│   ├── Programmers/   # 프로그래머스
+│   └── LeetCode/      # 리트코드
+├── 03_SQL             # SQL 문제 풀이
+│   ├── Programmers/   # 프로그래머스 (SQL 문제)
+├── 04_TIL             # Today I Learned 기록
+└── _image             # 이미지 저장용
+```
 
 
 
