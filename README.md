@@ -28,7 +28,6 @@
 │   └── LeetCode/      # 리트코드
 ├── 03_SQL             # SQL 문제 풀이
 │   ├── Programmers/   # 프로그래머스 (SQL 문제)
-├── 04_TIL             # Today I Learned 기록
 └── _image             # 이미지 저장용
 ```
 
