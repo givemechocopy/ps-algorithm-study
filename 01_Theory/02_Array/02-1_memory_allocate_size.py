@@ -1,22 +1,29 @@
-import sys
-import array
+import struct
 
-# 변수 1개
-c = b'a'    # char
-i = 1       # int
-s = 1       # short
-f = 1.0     # float
-l = 1       # long
+# struct format codes:
+# 'c' = char (1 byte)
+# 'i' = int (4 bytes)
+# 'h' = short (2 bytes)
+# 'f' = float (4 bytes)
+# 'l' = long (보통 4 or 8 bytes depending on system)
 
-# 배열 (array 모듈 사용: 고정형 배열)
-c_array = array.array('b', [0] * 100)     # signed char
-i_array = array.array('i', [0] * 100)     # signed int
-s_array = array.array('h', [0] * 100)     # signed short
-f_array = array.array('f', [0.0] * 100)   # float
-l_array = array.array('l', [0] * 100)     # signed long
+# 개별 크기
+char_size = struct.calcsize('c')
+int_size = struct.calcsize('i')
+short_size = struct.calcsize('h')
+float_size = struct.calcsize('f')
+long_size = struct.calcsize('l')
 
-print(f"\n char c 크기 = {sys.getsizeof(c)}\t: char c_array 크기 = {sys.getsizeof(c_array)}")
-print(f"\n int i 크기 = {sys.getsizeof(i)}\t: int i_array 크기 = {sys.getsizeof(i_array)}")
-print(f"\n short s 크기 = {sys.getsizeof(s)}\t: short s_array 크기 = {sys.getsizeof(s_array)}")
-print(f"\n float f 크기 = {sys.getsizeof(f)}\t: float f_array 크기 = {sys.getsizeof(f_array)}")
-print(f"\n long l 크기 = {sys.getsizeof(l)}\t: long l_array 크기 = {sys.getsizeof(l_array)}")
+# 배열 크기 (100개 원소)
+char_array_size = 100 * char_size
+int_array_size = 100 * int_size
+short_array_size = 100 * short_size
+float_array_size = 100 * float_size
+long_array_size = 100 * long_size
+
+# 출력 (C 스타일)
+print(f"char c 크기 = {char_size:2d} \t: char c_array 크기 = {char_array_size:4d}")
+print(f"int i 크기 = {int_size:2d} \t: int i_array 크기 = {int_array_size:4d}")
+print(f"short s 크기 = {short_size:2d} \t: short s_array 크기 = {short_array_size:4d}")
+print(f"float f 크기 = {float_size:2d} \t: float f_array 크기 = {float_array_size:4d}")
+print(f"long l 크기 = {long_size:2d} \t: long l_array 크기 = {long_array_size:4d}")
